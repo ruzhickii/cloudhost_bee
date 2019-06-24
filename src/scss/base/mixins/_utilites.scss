@@ -1,0 +1,39 @@
+
+@function em($target, $current: $baseFontSize) {
+  @return ($target / $current) * 1em;
+}
+
+@function rem($target) {
+  @return ($target / $baseFontSize) * 1rem;
+}
+
+@mixin e($element) {
+	&__#{$element} {
+		@content;
+	}
+}
+
+@mixin m($modifier) {
+	&_#{$modifier} {
+		@content;
+	}
+}
+
+
+@mixin mq($width) {
+    @media (min-width: $width) {
+      @content;
+    }
+}
+
+@mixin pseudo-server() {
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	background: $white;
+	border-radius: 50%;
+	top: 0;
+}
+
+

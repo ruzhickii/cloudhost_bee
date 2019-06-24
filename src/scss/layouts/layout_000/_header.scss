@@ -1,0 +1,21 @@
+.header {
+  background-color: $headerBackground;
+
+  @include e(title) {
+    max-width: 211px;
+    margin: 0 auto;
+    color: $white;
+    padding: 20px 0;
+    font: {
+      family: $sourceSansPro;
+      weight: 300;
+      size: rem(24px);
+    }
+
+    span {
+      font: {
+        weight: 700;
+      }
+    }
+  }
+}
